@@ -20,7 +20,7 @@ env:
  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
  AWS_REGION: us-east-2
  EKS_CLUSTER: vprofile-eks
- 
+
  jobs:
    terraform:
      name: "Apply terraform code changes"
@@ -32,7 +32,7 @@ env:
 
      steps:
        - name: Checkout source code 
-         uses: actions/checkout@v4
+         uses: actions/checkout@v5
 
        - name: Setup Terraform with specified version on the runner
          uses: hashicorp/setup-terraform@v2
